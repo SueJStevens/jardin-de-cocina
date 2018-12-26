@@ -1,0 +1,172 @@
+<div class="container">
+
+  <div class="text-center">
+    <h1>New Products</h1>
+    <p class="lead">Use this form to enter new products</p>
+  </div>
+
+  <form class="form-horizontal" action="newproduct" method="post">
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend>Enter a New Product</legend>
+
+      <div class="form-group col-md-12 text-left">
+        <label class="form-label">Plant Category</label>
+        <select required id="plantCategory" name="plantCategory" class="selectpicker" data-style="btn-outline-secondary"
+          data-width="100%" title="Choose Category for this Plant">
+          <option value="vegetables">Vegetables</option>
+          <option value="vegetables">Herbs</option>
+          <option value="vegetables">Fruits</option>
+          <option value="vegetables">Flowers</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label class="form-label" for="commonName">Common Name</label>
+          <input type="text" class="form-control" name="commonName" id="common_name" maxlength="60" placeholder="Common Name"
+            required>
+          <p class="text-right feedback" id="feedback_common_name">60 characters remain</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkdaysToMaturity" id="chkdaysToMaturity">
+          <label class="custom-control-label" for="chkdaysToMaturity">Days to Maturity</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="daysToMaturity" id="daysToMaturity" maxlength="60" placeholder="Days To Maturity">
+          <p class="text-right feedback" id="feedback_daysToMaturity">60 characters remain</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chksun" id="chksun">
+          <label class="custom-control-label" for="chksun">Sun</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="sun" id="sun" maxlength="60" placeholder="Sun">
+          <p class="text-right feedback" id="feedback_sun">60 characters remain</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkheight" id="chkheight">
+          <label class="custom-control-label" for="chkheight">Height</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="height" id="height" maxlength="60" placeholder="Height">
+          <p class="text-right feedback" id="feedback_height">60 characters remain</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkplantingTime" id="chkplantingTime">
+          <label class="custom-control-label" for="chkplantingTime">Planting Time</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="plantingTime" id="plantingTime" maxlength="60" placeholder="Planting Time">
+          <p class="text-right feedback" id="feedback_height">60 characters remain</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkthin" id="chkthin">
+          <label class="custom-control-label" for="chkthin">Thin</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="thin" id="thin" maxlength="60" placeholder="Thin">
+          <p class="text-right feedback" id="feedback_thin">60 characters remain</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkleafTexture" id="chkleafTexture">
+          <label class="custom-control-label" for="chkleafTexture">Leaf Texture</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="leafTexture" id="leafTexture" maxlength="60" placeholder="Leaf Texture">
+          <p class="text-right feedback" id="feedback_leafSize">60 characters remain</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkfruitSize" id="chkfruitSize">
+          <label class="custom-control-label" for="chkfruitSize">fruitSize</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="fruitSize" id="fruitSize" maxlength="60" placeholder="Fruit Size">
+          <p class="text-right feedback" id="feedback_fruitSize">60 characters remain</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chkspread" id="chkspread">
+          <label class="custom-control-label" for="chkspread">Spread</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="spread" id="spread" maxlength="60" placeholder="Spread">
+          <p class="text-right feedback" id="feedback_spread">60 characters remain</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chksowMethod" id="chksowMethod">
+          <label class="custom-control-label" for="chksowMethod">Sow Method</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="sowMethod" id="sowMethod" maxlength="60" placeholder="Sow Method">
+          <p class="text-right feedback" id="feedback_sowMethod">60 characters remain</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chksowTime" id="chksowTime">
+          <label class="custom-control-label" for="chksowTime">Sow Time</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="sowTime" id="sowTime" maxlength="60" placeholder="Sow Time">
+          <p class="text-right feedback" id="feedback_sowTime">60 characters remain</p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="custom-control custom-checkbox mx-2">
+          <input type="checkbox" class="custom-control-input" name="chklifeCycle" id="chklifeCycle">
+          <label class="custom-control-label" for="chklifeCycle">Life Cycle</label>
+          <br>
+        </div>
+        <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="lifeCycle" id="lifeCycle" maxlength="60" placeholder="Sow Time">
+          <p class="text-right feedback" id="feedback_lifeCycle">60 characters remain</p>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="btnSaveProduct">Save Product</label>
+        <div class="col-md-4">
+          <button id="btnSaveProduct" name="btnSaveProduct" class="">Save</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+
+</div> <!-- /.container -->

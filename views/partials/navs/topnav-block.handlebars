@@ -1,0 +1,142 @@
+<!--The Nav Bar - navbar-light bg-light is white background, black letters-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand skool-logo" href="{{navLogo.route}}"><img class="img-responsive" src="/assets/images/logo.png" alt="logo_small"
+      height="50"></a>
+  <a class="navbar-brand skool-logo" href="{{navLogo.route}}"><img class="img-responsive" src="/assets/images/slogan.png" alt="logo_small"
+      height="35"></a>
+
+  <!--The Hamburger-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbarNavDropdown" class="navbar-collapse collapse mt-0 mb-1">
+    <!--some navigation items on the left **Note! text-right in the hamburger-->
+    <ul class="navbar-nav mr-auto text-right">
+      <!--HOME-->
+      <li class="nav-item active">
+        <a class="nav-link" href="{{navLogo.route}}">
+          <span class="bar">|&emsp;</span>Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <!--Reports-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="bar">|&emsp;</span>Reports
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="/reports">Report #1</a></li>
+          <li><a class="dropdown-item" href="#">Report #2</a></li>
+          <li><a class="dropdown-item" href="#">Report #3</a></li>
+          <li><a class="dropdown-item" href="#">Report #4</a></li>
+          <li><a class="dropdown-item" href="#">Report #5</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+
+
+    <!--some navigation items on the right-->
+    <ul class="navbar-nav text-right">
+
+      <!--New Plants-->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="/newproduct">Enter A New Plant</a>
+      </li>
+
+      <!--Scrape Plant Info-->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="/scrape-product">Scrape Plant Info</a>
+      </li>
+
+
+
+      <!--CONTENT MANAGEMENT SYSTEM-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="bar">|&emsp;</span>CMS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/cms">CMS Dashboard</a>
+          <a class="dropdown-item" href="/cms/students">Enter New Students</a>
+          <a class="dropdown-item" href="/cms/parents">Enter Parents</a>
+          <a class="dropdown-item" href="/cms/personnel">Enter Personnel</a>
+          <a class="dropdown-item" href="/cms/roster">Build Roster</a>
+        </div>
+      </li>
+
+      <!--ADMINISTRATION-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="bar">|&emsp;</span>Admin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/cms/manageusers">Password and User Manager</a>
+          <a class="dropdown-item" href="/optin">Opt-In Form</a>
+        </div>
+      </li>
+
+      <!--HOME-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuHome" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <span class="bar">|&emsp;</span>Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+          <a class="dropdown-item" href="/cms">Home</a>
+          <a class="dropdown-item" href="/profile">Profile</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#myModal">Change My Password</a>
+          <a id="user-logout" class="dropdown-item" href="/logout">Logout</a>
+        </div>
+      </li>
+
+      <!--CLOSE NAV-->
+
+    </ul>
+  </div>
+</nav>
+
+{{!-- Change My Password Modal --}}
+
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Change My Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-login" method="POST" action="/reset">
+          <div class="form-label-group">
+              <input type="email" id="reset_pass_email" name="reset_pass_email" class="form-control outline-secondary"
+                  placeholder="Email address" autocomplete="email" required autofocus>
+              <label for="reset_pass_email">Email</label>
+          </div>
+          <div class="form-label-group">
+            <input type="password" id="reset_password" name="reset_password" class="form-control" placeholder="Password"
+              autocomplete="password" required>
+            <label for="reset_password">New Password</label>
+          </div>
+
+          <div class="form-label-group">
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Confirm Password"
+              autocomplete="password" required>
+            <label for="confirm_password">Confirm Password</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="reset-email-btn" type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

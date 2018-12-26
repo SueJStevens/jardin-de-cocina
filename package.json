@@ -1,0 +1,32 @@
+{
+  "name": "jardin-de-cocina",
+  "version": "1.0.0",
+  "description": "A thought for Group Project 3.  This app tracks information about garden plants",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SueJStevens/jardin-de-cocina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SueJStevens/jardin-de-cocina/issues"
+  },
+  "homepage": "https://github.com/SueJStevens/jardin-de-cocina#readme"
+}
